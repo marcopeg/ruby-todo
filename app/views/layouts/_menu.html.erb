@@ -4,8 +4,12 @@
       <%= link_to 'RubyTodo', '/', :class=>'navbar-brand' %>
     </div>
     <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to "Authors", authors_path %></li>
-      <li><%= link_to "Tasks", tasks_path %></li>
+      <li class="<%= 'active' if params[:controller] == 'authors' %>">
+        <%= link_to "Authors", authors_path %>
+      </li>
+      <li class="<%= 'active' if params[:controller] == 'tasks' %>">
+        <%= link_to "Tasks", tasks_path %>
+      </li>
     </ul>
   </div>
 </nav>
