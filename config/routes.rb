@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+  post 'sessions/new', to: 'sessions#create'
+
   resources :tasks
   resources :authors
   # The priority is based upon order of creation: first created -> highest priority.

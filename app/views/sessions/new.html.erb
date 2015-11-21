@@ -1,0 +1,35 @@
+<h1>Login</h1>
+
+<% if @error %>
+<div class="panel panel-danger">
+    <div class="panel-heading">
+        <h3 class="panel-title">Error!</h3>
+    </div>
+</div>
+<% end %>
+
+<% if @success %>
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">Yeah!</h3>
+    </div>
+</div>
+<% end %>
+
+<%= form_for(:session) do |f| %>
+    
+    <div class="form_group">
+        <%= f.label :uname %>
+        <%= f.text_field :uname, :class => 'form-control' %>
+    </div>
+
+    <div class="form_group">
+        <%= f.label :passw %>
+        <%= f.password_field :passw, :class => 'form-control' %>
+    </div>
+    <hr />
+    <div class="form_group">
+        <%= f.submit 'Log In', :class => 'btn btn-primary' %>
+    </div>
+    
+<% end %>
