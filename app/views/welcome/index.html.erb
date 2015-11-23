@@ -1,5 +1,7 @@
 <p>Welcome!</p>
 
-<%= link_to 'Authors', authors_path %>
- | 
-<%= link_to 'Tasks', tasks_path %>
+<ul>
+    <li><%= link_to 'Authors', authors_path %></li>
+    <li><%= link_to 'Tasks', tasks_path %></li>
+    <li><%= link_to 'My Tasks', :controller => 'my_tasks' %></li>
+</ul>

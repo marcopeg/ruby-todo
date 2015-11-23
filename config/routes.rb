@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'sessions/new'
   post 'sessions/new', to: 'sessions#create'
+  post 'session/logout', to: 'sessions#delete'
 
   resources :tasks
   resources :authors
